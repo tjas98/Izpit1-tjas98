@@ -1,0 +1,133 @@
+[
+  {
+    "naziv": "Stari grad Celje",
+    "naslov": "Cesta na grad 78, 3000 Celje, Slovenija",
+    "ocena": 3,
+    "lastnosti": [
+      "slikovit razgled",
+      "vstopnina",
+      "otrokom prijazno"
+    ],
+    "koordinate": [
+      15.271601,
+      46.219849
+    ],
+    "delovniCas": [
+      {
+        "dnevi": "ponedeljek - petek",
+        "odprtje": "9:00",
+        "zaprtje": "21:00",
+        "zaprto": false
+      },
+      {
+        "dnevi": "sobota",
+        "odprtje": "9:00",
+        "zaprtje": "19:00",
+        "zaprto": false
+      },
+      {
+        "dnevi": "nedelja",
+        "zaprto": true
+      }
+    ],
+    "komentarji": [
+      {
+        "avtor": "Dejan Lavbič",
+        "ocena": 5,
+        "datum": {
+          "$date": "2019-11-07T00:00:00Z"
+        },
+        "besediloKomentarja": "Odlična lokacija, ne morem je prehvaliti."
+      },
+      {
+        "avtor": "Kim Jong Un",
+        "ocena": 1,
+        "datum": {
+          "$date": "2019-11-08T00:00:00Z"
+        },
+        "besediloKomentarja": "Čisti dolgčas, še kava je zanič."
+      }
+    ]
+  },
+  {
+    "naziv": "ZOO Ljubljana",
+    "naslov": "Večna pot 70, 1000 Ljubljana, Slovenija",
+    "ocena": 4,
+    "lastnosti": [
+      "priporočljivo za otroke",
+      "živali",
+      "parkirišče je na voljo",
+      "vstopnina"
+    ],
+    "koordinate": [
+      14.472072,
+      46.052747
+    ],
+    "delovniCas": [
+      {
+        "dnevi": "ponedeljek - nedelja",
+        "odprtje": "9:00",
+        "zaprtje": "19:00",
+        "zaprto": false
+      }
+    ],
+    "komentarji": [
+      {
+        "avtor": "Tinček Sosedov",
+        "ocena": 5,
+        "datum": {
+          "$date": "2019-07-17T00:00:00Z"
+        },
+        "besediloKomentarja": "Otroci so bili navdušeni nad igrišči, ki so resnično izvirna. Lahko bi ostali cel dan."
+      },
+      {
+        "avtor": "Marija Kovačeva",
+        "ocena": 3,
+        "datum": {
+          "$date": "2019-07-10T00:00:00Z"
+        },
+        "besediloKomentarja": "Všeč so mi bili morski levi in tigri, medtem ko mi je slon deloval osamljeno."
+      }
+    ]
+  },
+  {
+    "naziv": "Angkor Wat",
+    "naslov": "Krong Siem Reap, Kambodža",
+    "ocena": 4,
+    "lastnosti": [
+      "vstopnina",
+      "slikovit razgled",
+      "turistična atrakcija"
+    ],
+    "koordinate": [
+      103.866667,
+      13.4125
+    ],
+    "delovniCas": [
+      {
+        "dnevi": "ponedeljek - nedelja",
+        "odprtje": "5:00",
+        "zaprtje": "17:00",
+        "zaprto": false
+      }
+    ],
+    "komentarji": [
+      {
+        "avtor": "Janez Kranjski",
+        "ocena": 3,
+        "datum": {
+          "$date": "2019-08-20T00:00:00Z"
+        },
+        "besediloKomentarja": "Cena vstopnice se je v zadnjih letih povišala, saj dnevni vstop stane kar $37. Zelo zanimiva lokacija, vendar je pogosto polna turistov."
+      },
+      {
+        "avtor": "Miško Rokohitri",
+        "ocena": 5,
+        "datum": {
+          "$date": "2019-08-20T00:00:00Z"
+        },
+        "besediloKomentarja": "To preprosto morate videti - ogromen kompleks templov in ena najbolj razpoznavnih atrakcij na svetu."
+      }
+    ]
+  }
+]

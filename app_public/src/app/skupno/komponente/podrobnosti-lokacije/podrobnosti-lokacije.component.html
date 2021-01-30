@@ -1,0 +1,85 @@
+<div class="row">
+  <div [ngClass]="{'col-12':true, 'col-md-6':jePovezava()}">
+    <app-zvezdice [ocena]="lokacija.ocena"></app-zvezdice>
+    <p>{{lokacija.naslov}}</p>
+    <div class="card card-primary">
+      <div class="card-block">
+        <h2 class="card-title">Delovni čas</h2>
+        <p class="card-text" *ngFor="let termin of lokacija.delovniCas" [ngSwitch]="termin.zaprto">
+          {{termin.dnevi}} :
+          <span *ngSwitchCase="true">zaprto</span>
+          <span *ngSwitchDefault>{{termin.odprtje}} - {{termin.zaprtje}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="card card-primary mt-3">
+      <div class="card-block lastnosti">
+        <h2 class="card-title">Lastnosti</h2>
+        <span class="badge badge-warning" *ngFor="let lastnost of lokacija.lastnosti">{{lastnost}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 mt-3" *ngIf="jePovezava()">
+    <div class="card card-primary">
+      <div class="card-block">
+        <h2>Zemljevid lokacije</h2>
+        <div class="embed-responsive embed-responsive-4by3">
+          <iframe
+            [src]="('https://maps.google.com/maps?q=' + lokacija.koordinate[1] + ',' + lokacija.koordinate[0] + '&z=15&output=embed') | dovoliUrl"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="card card-primary">
+      <div class="card-block" [ngSwitch]="jePrijavljen()">
+        <button (click)="obrazecPrikazan=true" *ngSwitchCase="true" class="btn btn-primary btn-sm float-right" [disabled]="!jePovezava()">Dodaj komentar</button>
+        <button routerLink="/prijava" *ngSwitchDefault class="btn btn-primary btn-sm float-right" [disabled]="!jePovezava()">Prijava za komentiranje</button>
+        <h2 class="card-title">Komentarji uporabnikov</h2>
+        <div *ngIf="obrazecPrikazan && jePovezava()">
+          <form (ngSubmit)="dodajNovKomentar()">
+            <hr>
+            <h4>Dodajanje novega komentarja</h4>
+            <div *ngIf="obrazecNapaka" class="alert alert-danger" role="alert">
+              {{obrazecNapaka}}
+            </div>
+            <div class="form-group row">
+              <label class="col-10 col-sm-2 col-form-label" for="ocena">Ocena</label>
+              <div class="col-12 col-sm-2">
+                <select [(ngModel)]="novKomentar.ocena" id="ocena" name="ocena" class="form-control form-control-sm">
+                  <option [ngValue]="5">5</option>
+                  <option [ngValue]="4">4</option>
+                  <option [ngValue]="3">3</option>
+                  <option [ngValue]="2">2</option>
+                  <option [ngValue]="1">1</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label col-form-label-sm" for="komentar">Komentar</label>
+              <div class="col-sm-10">
+                <textarea [(ngModel)]="novKomentar.komentar" id="komentar" class="form-control form-control-sm" name="komentar" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-12">
+                <button (click)="obrazecPrikazan=false" class="btn btn-primary btn-sm float-right">Prekliči</button>
+                <button class="btn btn-primary btn-sm float-right">Dodaj moj komentar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row komentar" *ngFor="let komentar of lokacija.komentarji | najnovejsiNajprej">
+          <div class="col-12 rounded">
+            <app-zvezdice class="komentar-ocena" [ocena]="komentar.ocena"></app-zvezdice>
+            <span class="komentar-avtor">{{komentar.avtor}}</span>
+            <small class="komentar-datum">{{komentar.datum | date : 'd. MMMM, yyyy'}}</small>
+          </div>
+          <div class="col-12" [innerHTML]="komentar.besediloKomentarja | htmlPrelomVrstice"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

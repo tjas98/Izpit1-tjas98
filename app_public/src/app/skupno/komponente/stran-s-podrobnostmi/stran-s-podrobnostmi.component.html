@@ -1,0 +1,7 @@
+<app-glava-strani [vsebina]="vsebinaStrani.glava"></app-glava-strani>
+<div class="row">
+  <div class="col-12 col-md-8">
+    <app-podrobnosti-lokacije *ngIf="lokacija" [lokacija]="lokacija"></app-podrobnosti-lokacije>
+  </div>
+  <app-stranska-orodna-vrstica class="col-12 col-md-4" [vsebina]="vsebinaStrani.stranskaOrodnaVrstica"></app-stranska-orodna-vrstica>
+</div>

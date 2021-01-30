@@ -1,0 +1,16 @@
+<div class="alert alert-warning" [hidden]="!sporocilo">{{sporocilo}}</div>
+<div class="card" *ngFor="let lokacija of lokacije">
+  <div class="card-block">
+    <h4>
+      <a routerLink="/lokacija/{{lokacija._id}}">{{lokacija.naziv}}</a>
+      <small class="text-warning">
+        <app-zvezdice [ocena]="lokacija.ocena"></app-zvezdice>
+      </small>
+      <span class="badge badge-pill badge-warning float-right">{{lokacija.razdalja | razdalja}}</span>
+    </h4>
+    <p class="naslov">{{lokacija.naslov}}</p>
+    <p class="lastnosti">
+      <span class="badge badge-warning" *ngFor="let lastnost of lokacija.lastnosti">{{lastnost}}</span>
+    </p>
+  </div>
+</div>

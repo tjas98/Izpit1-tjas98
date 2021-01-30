@@ -1,0 +1,39 @@
+<div class="row banner">
+  <div class="col-12">
+    <h1>{{glavaStrani.naslov}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-md-8">
+    <form id="dodajKomentar" action="" method="post" role="form">
+      {{#ujemanjeNiza napaka "vrednost"}}
+        <div class="alert alert-danger">Prosim izpolnite polja!</div>
+      {{/ujemanjeNiza}}
+      <div class="form-group row">
+        <label class="col-10 col-sm-2 col-form-label" for="naziv">Naziv</label>
+        <div class="col-12 col-sm-10">
+          <input id="naziv" class="form-control" name="naziv">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-10 col-sm-2 col-form-label" for="ocena">Ocena</label>
+        <div class="col-12 col-sm-2">
+          <select id="ocena" name="ocena" class="form-control">
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="komentar">Komentar</label>
+        <div class="col-sm-10">
+          <textarea id="komentar" class="form-control" name="komentar" rows="5"></textarea>
+        </div>
+      </div>
+      <button class="btn btn-primary float-right">Dodaj moj komentar</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,156 @@
+{
+  "configVersion": 1,
+  "timestamp": 1608198354685,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.6eb8fa00a78705aa0ade.js",
+        "/manifest.webmanifest",
+        "/polyfills.8c151b8375e767ff858f.js",
+        "/runtime.0e49e2b53282f40c8925.js",
+        "/styles.3ff695c00d717f2d2a11.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/javascripts/bootstrap.min.js",
+        "/assets/javascripts/bootstrap.min.js.map",
+        "/assets/javascripts/jquery-3.5.1.min.js",
+        "/assets/javascripts/jquery-3.5.1.min.map",
+        "/assets/javascripts/popper.min.js",
+        "/assets/javascripts/popper.min.js.map",
+        "/assets/javascripts/preverjanje.js",
+        "/assets/stylesheets/all.min.css",
+        "/assets/stylesheets/bootstrap.min.css",
+        "/assets/stylesheets/bootstrap.min.css.map",
+        "/assets/stylesheets/bootstrap.slate.css",
+        "/assets/stylesheets/bootstrap.slate.min.css",
+        "/assets/stylesheets/style.css",
+        "/assets/webfonts/fa-brands-400.eot",
+        "/assets/webfonts/fa-brands-400.svg",
+        "/assets/webfonts/fa-brands-400.ttf",
+        "/assets/webfonts/fa-brands-400.woff",
+        "/assets/webfonts/fa-brands-400.woff2",
+        "/assets/webfonts/fa-regular-400.eot",
+        "/assets/webfonts/fa-regular-400.svg",
+        "/assets/webfonts/fa-regular-400.ttf",
+        "/assets/webfonts/fa-regular-400.woff",
+        "/assets/webfonts/fa-regular-400.woff2",
+        "/assets/webfonts/fa-solid-900.eot",
+        "/assets/webfonts/fa-solid-900.svg",
+        "/assets/webfonts/fa-solid-900.ttf",
+        "/assets/webfonts/fa-solid-900.woff",
+        "/assets/webfonts/fa-solid-900.woff2"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*",
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*"
+      ]
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "edugeocache-api",
+      "patterns": [
+        "http:\\/\\/localhost:3000\\/.*",
+        "https:\\/\\/edugeocache-sp-2020-2021\\.herokuapp\\.com\\/api\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": 3600000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/javascripts/bootstrap.min.js": "0c4e8445f6f0c9611dc1c13dc6f085eb4bcaca0b",
+    "/assets/javascripts/bootstrap.min.js.map": "303d901d3f80202dc56c61599a06cf1f6639dbc2",
+    "/assets/javascripts/jquery-3.5.1.min.js": "c8e1c8b386dc5b7a9184c763c88d19a346eb3342",
+    "/assets/javascripts/jquery-3.5.1.min.map": "6207ad2639a863210f202384044a575c69a678ac",
+    "/assets/javascripts/popper.min.js": "9d856811d0baa3dc3b3a267da32a5d0e7fe94030",
+    "/assets/javascripts/popper.min.js.map": "a4c82eb2a1d55834a318905c174d2fe375c3fed9",
+    "/assets/javascripts/preverjanje.js": "e34013381bf61f9ed96e4498353248c982a293f4",
+    "/assets/stylesheets/all.min.css": "6f33eae92d42fe209167139940a0ad6a3c6c167e",
+    "/assets/stylesheets/bootstrap.min.css": "8ed2d6350d23f857d92805737d0f97c675de666b",
+    "/assets/stylesheets/bootstrap.min.css.map": "07b8ede1f08f73dbaae16bd3546027eb82c6628b",
+    "/assets/stylesheets/bootstrap.slate.css": "c66a015308771d7210a9ae69acd6bbe3ea081fa4",
+    "/assets/stylesheets/bootstrap.slate.min.css": "d96f2d48f6bab0084b3066b52e66b2dbd4b0fa46",
+    "/assets/stylesheets/style.css": "2161f704a5f0ddfef77759c0dff611e6234bc9c5",
+    "/assets/webfonts/fa-brands-400.eot": "40c8f2a0dc154160fde50e0c27f694f12c7b1636",
+    "/assets/webfonts/fa-brands-400.svg": "99dff0739882276ad6c434d73228efc7971b0a66",
+    "/assets/webfonts/fa-brands-400.ttf": "29f59b4eecc72052d9110a5d4030a10ad9bf73d7",
+    "/assets/webfonts/fa-brands-400.woff": "fddb95d7a0f48d2bf90a5ee3095e8264dca18053",
+    "/assets/webfonts/fa-brands-400.woff2": "62584b9868428fd75af3fc5ee2f9918dda428be5",
+    "/assets/webfonts/fa-regular-400.eot": "3306178c90d9df939d2a5eabf533ba3650fbe80e",
+    "/assets/webfonts/fa-regular-400.svg": "51afca56e309df6fdc56b53fa6a7d3ce64826490",
+    "/assets/webfonts/fa-regular-400.ttf": "517a3b41c1e01b65898b5f1074434d43a361a54f",
+    "/assets/webfonts/fa-regular-400.woff": "da17a9f1dcae379c8ba20f1089059c202216cba7",
+    "/assets/webfonts/fa-regular-400.woff2": "5e4d45052f43e55aaad7f14d13280215e39aa45b",
+    "/assets/webfonts/fa-solid-900.eot": "96a5637429426764ea9b28bf4d1eb55ae10de57e",
+    "/assets/webfonts/fa-solid-900.svg": "5501fb62e20a89bdd89bf3fa147ca4dbcd2fc67f",
+    "/assets/webfonts/fa-solid-900.ttf": "874c650701d0cbfb8f1de48a496dabed3bbf22e6",
+    "/assets/webfonts/fa-solid-900.woff": "f13e252f8a51a5279fd21e26ada0bd2f55bcefd8",
+    "/assets/webfonts/fa-solid-900.woff2": "6290834672aba86d5b6c1c73b30b57c9c53996f7",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "6d585cb7abe5220506ecf4804d0b4d0e2448f466",
+    "/main.6eb8fa00a78705aa0ade.js": "cb222f19b536011fe01a21f51520bedc31ce3b60",
+    "/manifest.webmanifest": "114ede9d4fe92b289231125c5cbb1cde86af33bf",
+    "/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
+    "/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/styles.3ff695c00d717f2d2a11.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

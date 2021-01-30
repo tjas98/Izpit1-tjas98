@@ -1,0 +1,44 @@
+{
+  "name": "edugeocache",
+  "version": "1.2.3",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha test --bail --reporter mochawesome --reporter-options autoOpen=true,reportDir=test/porocilo,reportFilename=porocilo,json=false",
+    "lokacije-uvoz": "docker cp ./app_api/models/testni-podatki.json sp-edugeocache-mongodb:/testni-podatki.json; docker exec -it sp-edugeocache-mongodb mongoimport --db EduGeoCache --collection Lokacije --mode upsert --upsertFields naziv --jsonArray --file testni-podatki.json; docker exec -it sp-edugeocache-mongodb rm -rf testni-podatki.json; docker exec -it sp-edugeocache-mongodb bash -c \"mongo EduGeoCache --eval 'db.Lokacije.find().forEach(function(dokument) { for (var i = 0; i < dokument.komentarji.length; i++) { dokument.komentarji[i]._id = ObjectId() } db.Lokacije.update({ \"_id\" : dokument._id }, dokument) })'\"",
+    "lokacije-brisi": "docker exec -it sp-edugeocache-mongodb bash -c \"mongo EduGeoCache --eval 'db.Lokacije.remove({})'\"",
+    "lokacije-prikazi": "docker exec -it sp-edugeocache-mongodb bash -c \"mongo EduGeoCache --eval 'db.Lokacije.find()'\"",
+    "lokacije-izvoz-produkcija": "docker exec -it sp-edugeocache-mongodb bash -c \"mongodump -h localhost -d EduGeoCache -o ./\"; docker exec -it sp-edugeocache-mongodb bash -c \"mongorestore --host EduGeoCache-shard-0/edugeocache-shard-00-00-qfwjv.mongodb.net:27017,edugeocache-shard-00-01-qfwjv.mongodb.net:27017,edugeocache-shard-00-02-qfwjv.mongodb.net:27017 --ssl --username app --authenticationDatabase admin -d EduGeoCache ./EduGeoCache\"; docker exec -it sp-edugeocache-mongodb bash -c \"rm -rf ./EduGeoCache\"",
+    "uporabniki-uvoz": "docker cp ./app_api/models/testni-uporabniki.json sp-edugeocache-mongodb:/testni-uporabniki.json; docker exec -it sp-edugeocache-mongodb mongoimport --db EduGeoCache --collection Uporabniki --mode upsert --upsertFields elektronskiNaslov --jsonArray --file testni-uporabniki.json; docker exec -it sp-edugeocache-mongodb rm -rf testni-uporabniki.json",
+    "uporabniki-brisi": "docker exec -it sp-edugeocache-mongodb bash -c \"mongo EduGeoCache --eval 'db.Uporabniki.remove({})'\"",
+    "uporabniki-prikazi": "docker exec -it sp-edugeocache-mongodb bash -c \"mongo EduGeoCache --eval 'db.Uporabniki.find()'\""
+  },
+  "engines": {
+    "node": ">=15.0.1",
+    "npm": ">=7.0.3"
+  },
+  "dependencies": {
+    "axios": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "dotenv": "*",
+    "express": "*",
+    "express-jwt": "*",
+    "hbs": "*",
+    "http-errors": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "swagger-jsdoc": "*",
+    "swagger-ui-express": "*"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "chromedriver": "*",
+    "mocha": "*",
+    "mochawesome": "*",
+    "selenium-webdriver": "*"
+  }
+}

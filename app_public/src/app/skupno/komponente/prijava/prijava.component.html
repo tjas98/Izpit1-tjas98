@@ -1,0 +1,19 @@
+<app-glava-strani [vsebina]="vsebinaStrani.glava"></app-glava-strani>
+<div class="row">
+  <div class="col-12 col-md-8">
+    <p class="lead">Še niste registrirani uporabnik? Prosim <a routerLink="/registracija">registrirajte</a> se.</p>
+    <form (submit)="posiljanjePodatkov()" autocomplete="off">
+      <div role="alert" *ngIf="napakaNaObrazcu" class="alert alert-danger">{{ napakaNaObrazcu }}</div>
+      <div class="form-group">
+        <label for="elektronskiNaslov" class="col-form-label col-form-label-sm">Elektronski naslov</label>
+        <input type="email" class="form-control form-control-sm" name="elektronskiNaslov" placeholder="Vnesite elektronski naslov" [(ngModel)]="prijavniPodatki.elektronskiNaslov" [disabled]="!jePovezava()">
+      </div>
+      <div class="form-group">
+        <label for="geslo" class="col-form-label col-form-label-sm">Geslo</label>
+        <input type="password" class="form-control form-control-sm" name="geslo" placeholder="Geslo" [(ngModel)]="prijavniPodatki.geslo" [disabled]="!jePovezava()">
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm" [disabled]="!jePovezava()">Prijavi</button>
+    </form>
+  </div>
+  <app-stranska-orodna-vrstica class="col-12 col-md-4" [vsebina]="vsebinaStrani.stranskaOrodnaVrstica"></app-stranska-orodna-vrstica>
+</div>

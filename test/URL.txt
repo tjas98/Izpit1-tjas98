@@ -1,0 +1,7 @@
+http://localhost:3000/
+http://localhost:3000/prijava
+http://localhost:3000/registracija
+http://localhost:3000/informacije
+http://localhost:3000/lokacija/5fd1d11f019f29ab303a9d55
+http://localhost:3000/lokacija/5fd1d11f019f29ab303a9d56
+http://localhost:3000/lokacija/5fd1d11f019f29ab303a9d57
